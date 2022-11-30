@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# Author - Eze Douglas
 
 
 def print_last_digit(number):
