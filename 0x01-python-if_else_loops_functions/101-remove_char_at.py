@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def remove_char_at(str, n):
     copy = ''
     if len(str) == 0:
@@ -8,5 +9,7 @@ def remove_char_at(str, n):
         if i != n:
             copy += str[i]
     return copy
+
+
 if __name__ == '__main__':
     print(remove_char_at("Holberton School", 3))
