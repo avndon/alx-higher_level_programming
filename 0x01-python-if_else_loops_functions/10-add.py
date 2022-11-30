@@ -1,5 +1,6 @@
 
 #!/usr/bin/python3
+# Author -Eze Douglas
 
 
 def add(a, b):
