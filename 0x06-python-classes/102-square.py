@@ -1,80 +1,53 @@
 #!/usr/bin/python3
+"""My square module"""
 
 
 class Square:
-    """Square class."""
+    """defines a square"""
 
     def __init__(self, size=0):
-        """__init__ method that sets the size of square.
-        Args:
-            size (int): size of Square
+        """Create a Square
+        Args: size: length of a side of Square
         """
-        self.size = size
-
-    def area(self):
-        """Gets the area of the Square.
-        Returns:
-            Area of squre
-        """
-        return self.__size * self.__size
+        self.__size = size
 
     @property
     def size(self):
+        """"The propery of size as the len of a side of Square
+        Raises:
+            TypeError: if size != int
+            ValueErrorr: if size < 0
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """size setter  method that sets the size of square.
-        Args:
-            value (int): size of Square
-        Raises:
-            TypeError: If `value` is not an integer.
-            ValueError: If `value` is less than 0.
-        """
-        if not isinstance(value, int) and not isinstance(value, float):
-            raise TypeError("size must be a number")
+        if not isinstance(value, int):
+            raise TypeError('size must be an integer')
         if value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError('size must be >= 0')
         self.__size = value
 
-    def __eq__(self, square):
-        """Implements equals"""
-        return self.area() == square.area()
+    def area(self):
+        """Get the area of a Square
+        Returns: The size squared
+        """
+        return self.__size * self.__size
 
-    def __ne__(self, square):
-        """Implements not equal"""
-        return self.area() != square.area()
+    def __le__(self, other):
+        return self.area() <= other.area()
 
-    def __gt__(self, square):
-        """Implements greater than"""
-        return self.area() > square.area()
+    def __lt__(self, other):
+        return self.area() < other.area()
 
-    def __ge__(self, square):
-        """Implements greater or equal to"""
-        return self.area() >= square.area()
+    def __ge__(self, other):
+        return self.area() >= other.area()
 
-    def __lt__(self, square):
-        """Implements less than"""
-        return self.area() < square.area()
+    def __ne__(self, other):
+        return self.area() != other.area()
 
-    def __le__(self, square):
-        """Implements less than or equal to"""
-        return self.area() <= square.area()
+    def __gt__(self, other):
+        return self.area() > other.area()
 
-
-if __name__ == '__main__':
-    s_5 = Square(5)
-    s_6 = Square(6)
-
-    if s_5 < s_6:
-        print("Square 5 < Square 6")
-    if s_5 <= s_6:
-        print("Square 5 <= Square 6")
-    if s_5 == s_6:
-        print("Square 5 == Square 6")
-    if s_5 != s_6:
-        print("Square 5 != Square 6")
-    if s_5 > s_6:
-        print("Square 5 > Square 6")
-    if s_5 >= s_6:
-        print("Square 5 >= Square 6")
+    def __eq__(self, other):
+        return self.area() == other.area()
