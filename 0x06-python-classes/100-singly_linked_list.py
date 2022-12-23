@@ -34,7 +34,7 @@ class Node:
         return (self.__next_node)
 
     @next_node.setter
-    def next_node(self, value)
+    def next_node(self, value):
         """set value of next node"""
 
         if (value is not None and not isinstance(value, Node)):
