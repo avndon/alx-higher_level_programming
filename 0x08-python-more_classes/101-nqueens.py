@@ -13,7 +13,7 @@ if __name__ == "__main__":
         print("Usage: nqueens N")
         exit(1)
     if argv[1].isdigit() is False:
-        print("N must be a number"
+        print("N must be a number")
         exit(1)
     n = int(argv[1])
     if n < 4:
@@ -51,7 +51,7 @@ if __name__ == "__main__":
         """recursive backtracking function to find the solution"""
         for y in range(n):
             clear_a(x)
-            if reject(x, y):
+            if reject(x, y)
                 a[x][1] = y
                 if (x == n - 1):  # accepts the solution
                     print(a)
