@@ -1,57 +1,51 @@
-The ``4-print_square`` module
-============================
+==============================
+How to use 4-print_square.py
+==============================
 
-Using ``print_square``
----------------------
+1) Import file
+>>> print_square = __import__('4-print_square').print_square
 
-Importing function from the module:
+2) Print a square with 4 * 4 "#"
+>>> print_square(4)
+####
+####
+####
+####
 
-    >>> print_square = __import__('4-print_square').print_square
+3) Print the empty line
+>>> print_square(0)
 
-Printing a square with a size of 5
+4) print one per one #
 
-    >>> print_square(5)
-    #####
-    #####
-    #####
-    #####
-    #####
+>>> print_square(1)
+#
 
-Passing 0 as the size of the square
+5) size cant be negative
 
-    >>> print_square(0)
+>>> print_square(-1)
+Traceback (most recent call last):
+	  ...
+ValueError: size must be >= 0
 
-Passing a float number as the size of the square
+6) Square cant be a string
 
-    >>> print_square(1.0)
-    Traceback (most recent call last):
-    	      ...
-    TypeError: size must be an integer
+>>> print_square("string")
+Traceback (most recent call last):
+	  ...
+TypeError: size must be an integer
 
-Passing a string as the size of the square
+7) square has to print something
+>>> print_square(None)
+Traceback (most recent call last):
+	  ...
+TypeError: size must be an integer
 
-    >>> print_square('2')
-    Traceback (most recent call last):
-    	      ...
-    TypeError: size must be an integer
+8) boolean test for simbol #
+>>> print_square(True)
+#
 
-Passing a negative number as the size of the square
-
-    >>> print_square(-2)
-    Traceback (most recent call last):
-    	     ...
-    ValueError: size must be >= 0
-
-Passing None as the size of the square
-
-    >>> print_square(None)
-    Traceback (most recent call last):
-    	      ...
-    TypeError: size must be an integer
-
-Missing argument
-
-   >>> print_square()
-   Traceback (most recent call last):
-   	     ...
-   TypeError: print_square() missing 1 required positional argument: 'size'
+9) sizze cant be negative and fille it with "0"
+>>> print_square(-1.0)
+Traceback (most recent call last):
+	  ...
+TypeError: size must be an integer
