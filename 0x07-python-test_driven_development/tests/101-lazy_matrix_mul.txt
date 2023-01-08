@@ -1,4 +1,4 @@
-The ``101-lazy_matrix_mul`` module
+zy_matrix_mul`` module
 ============================
 
 Using ``lazy_matrix_mul``
@@ -70,7 +70,6 @@ Passing a list of string
 
    >>> matrix_mul([[]], ["Holberton"])
    Traceback (most recent call last):
-
    	     ...
    ValueError: shapes (1,0) and (1,) not aligned: 0 (dim 1) != 1 (dim 0)
 
